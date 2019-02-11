@@ -1,0 +1,59 @@
+ext {
+    junit_version="4.12"
+    scala_version="2.11.7"
+    lombok_version="1.18.4"
+
+    avro4s_version="2.0.4"
+    // avro4s_version="1.6.4" // works without issues
+
+    // kafka_client_version="2.1.0"
+}
+
+apply plugin: 'java'
+apply plugin: 'scala'
+
+group 'com.stlyus.samples.avro'
+version '0.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //scala dependencies
+    compile("org.scala-lang:scala-library:${scala_version}")
+
+    // avro
+    // compile("org.apache.avro:avro:${avro_version}")
+
+    // kafka
+    // compile("org.apache.kafka:kafka-clients:${kafka_client_version}")
+
+    // avro for scala
+    // compile("com.sksamuel.avro4s:avro4s-core_2.11:${avro4s_version}")
+    compile("com.sksamuel.avro4s:avro4s-core_2.12:${avro4s_version}")
+    
+    // lombok
+    compile("org.projectlombok:lombok:${lombok_version}")
+
+    // for unit tests
+    testCompile("junit:junit:${junit_version}")
+}
+
+// creating a fat jar so this project can be self reliant
+/*
+jar {
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+
+    // required for creating fat jar
+    zip64 true
+
+    // creating a fat jar
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+*/
