@@ -1,4 +1,4 @@
-package com.stylus.samples.avro.schema
+package com.stylus.avro.samples.schema
 
 import java.io.ByteArrayOutputStream
 

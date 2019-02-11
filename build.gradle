@@ -1,7 +1,7 @@
 ext {
     junit_version="4.12"
     scala_version="2.11.7"
-    lombok_version="1.18.4"
+    // lombok_version="1.18.4"
 
     avro4s_version="2.0.4"
     // avro4s_version="1.6.4" // works without issues
@@ -12,8 +12,8 @@ ext {
 apply plugin: 'java'
 apply plugin: 'scala'
 
-group 'com.stlyus.samples.avro'
-version '0.0.0'
+group 'com.stylus.avro.samples'
+version '1.0.0'
 
 sourceCompatibility = 1.8
 
@@ -37,7 +37,7 @@ dependencies {
     compile("com.sksamuel.avro4s:avro4s-core_2.12:${avro4s_version}")
     
     // lombok
-    compile("org.projectlombok:lombok:${lombok_version}")
+    // compile("org.projectlombok:lombok:${lombok_version}")
 
     // for unit tests
     testCompile("junit:junit:${junit_version}")

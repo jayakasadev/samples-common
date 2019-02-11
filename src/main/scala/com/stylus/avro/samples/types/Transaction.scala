@@ -1,4 +1,4 @@
-package com.stylus.samples.avro.types
+package com.stylus.avro.samples.types
 
 case class Transaction(tranactionId: String = "",
                        payer : Account,

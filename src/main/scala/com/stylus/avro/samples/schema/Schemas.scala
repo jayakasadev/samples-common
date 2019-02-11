@@ -1,6 +1,6 @@
-package com.stylus.samples.avro.schema
+package com.stylus.avro.samples.schema
 
-import com.stylus.samples.avro.types.{Account, Transaction}
+import com.stylus.avro.samples.types.{Account, Transaction}
 
 object Schemas {
 
@@ -14,7 +14,7 @@ object Schemas {
 
   def getSchema(schema : String) : Option[SerDeSchema[_]] = {
     schema match {
-      case "com.stylus.samples.avro.types.Account" => Some(account)
+      case "com.stylus.avro.samples.types.Account" => Some(account)
       case "com.stylus.samples.avro.types.Transaction" => Some(transaction)
       case _ => None // default case
     }

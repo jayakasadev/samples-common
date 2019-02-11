@@ -1,6 +1,6 @@
-package com.stylus.samples.avro.serialization
+package com.stylus.avro.samples.serialization
 
-import com.stylus.samples.avro.schema.{AvroSchema2, Schemas, SerDeSchema}
+import com.stylus.avro.samples.schema.{AvroSchema2, Schemas, SerDeSchema}
 
 @SerialVersionUID(1L)
 class SerDe[T >: Null](classPath : String) extends SerDeSchema[T] with Serializable {

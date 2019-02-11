@@ -1,7 +1,5 @@
-package com.stylus.samples.avro;
-
-import com.stylus.samples.avro.serialization.SerDe;
-import com.stylus.samples.avro.types.Account;
+import com.stylus.avro.samples.serialization.SerDe;
+import com.stylus.avro.samples.types.Account;
 
 import java.util.stream.IntStream;
 
@@ -9,7 +7,7 @@ public class SerDeTest {
     public static void main(String[] args){
         Account account = new Account("TEST", "TEST", "TEST", 0.0);
 
-        SerDe<Account> serDe = new SerDe<Account>("com.stylus.samples.avro.types.Account");
+        SerDe<Account> serDe = new SerDe<Account>("com.stylus.avro.samples.types.Account");
 
         // do some performance testing
         long start = System.currentTimeMillis();
@@ -46,6 +44,14 @@ public class SerDeTest {
         // TPS : 783944.8102853559
         // Runtime: 12.783
         // TPS : 782288.9775483063
+        // Runtime: 12.048
+        // TPS : 830013.2802124834
+        // Runtime: 12.19
+        // TPS : 820344.5447087777
+        // Runtime: 12.2
+        // TPS : 819672.131147541
+        // Runtime: 12.147
+        // TPS : 823248.5387338437
         System.out.println("Runtime: " + stop);
         System.out.println("TPS : " + tps);
     }

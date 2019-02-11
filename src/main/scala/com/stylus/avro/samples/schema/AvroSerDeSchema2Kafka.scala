@@ -1,7 +1,7 @@
-package com.stylus.samples.avro.schema
+package com.stylus.avro.samples.schema
 
 import java.io.ByteArrayOutputStream
-
+/*
 import com.sksamuel.avro4s._
 import org.apache.avro.Schema
 import org.apache.kafka.common.serialization.{Deserializer, Serde, Serializer}
@@ -33,3 +33,4 @@ class AvroSerDeSchema2Kafka[T >: Null : SchemaFor : Encoder : Decoder] extends S
     baos.toByteArray
   }
 }
+*/

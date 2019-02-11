@@ -1,14 +1,12 @@
 import java.util.stream.IntStream
 
-import com.stylus.samples.avro.serialization.SerDe
-import com.stylus.samples.avro.types.Account
-
-import scala.collection.parallel.immutable.ParVector
+import com.stylus.avro.samples.serialization.SerDe
+import com.stylus.avro.samples.types.Account
 
 object Main extends App{
   val account = new Account("TEST", "TEST", "TEST", 0.0)
 
-  val serDe = new SerDe[Account]("com.stylus.samples.avro.types.Account")
+  val serDe = new SerDe[Account]("com.stylus.avro.samples.types.Account")
 
   // do some performance testing
   val start = System.currentTimeMillis()
@@ -46,6 +44,10 @@ object Main extends App{
   // TPS : 791514.959632737
   // Runtime: 12.718
   // TPS : 786287.1520679352
+  // Runtime: 11.872
+  // TPS : 842318.0592991913
+  // Runtime: 11.805
+  // TPS : 847098.6869970352
   println("Runtime: " + stop)
   println("TPS : " + tps)
 }
